@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
@@ -6,22 +6,22 @@ import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
-import Collection from "./pages/Collection";
-import ProductInfo from "./pages/ProductInfo";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Cart from "./pages/Cart";
-import PlaceOrder from "./pages/PlaceOrder";
-import Orders from "./pages/Orders";
+import Home from "./Pages/Home";
+import Collection from "./Pages/Collection";
+import ProductInfo from "./Pages/ProductInfo";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Cart from "./Pages/Cart";
+import PlaceOrder from "./Pages/PlaceOrder";
+import Orders from "./Pages/Orders";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import { useState } from "react";
-import { ShopContext } from "./context/ShopContext";
 import Verify from "./Pages/Verify";
 
+import { ShopContext } from "./context/ShopContext";
+
 const App = () => {
-  const {token, navigate} = useContext(ShopContext);
+  const { token, navigate } = useContext(ShopContext);
   const location = useLocation();
   const hideLayoutPaths = ["/login", "/signup"];
 
