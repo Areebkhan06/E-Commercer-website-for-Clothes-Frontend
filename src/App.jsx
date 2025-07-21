@@ -2,9 +2,9 @@ import React, { useContext, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-import Navbar from "./components/Navbar";
-import SearchBar from "./components/SearchBar";
-import Footer from "./components/Footer";
+import Navbar from "./Components/Navbar";
+import SearchBar from "./Components/SearchBar";
+import Footer from "./Components/Footer";
 
 import Home from "./Pages/Home";
 import Collection from "./Pages/Collection";
