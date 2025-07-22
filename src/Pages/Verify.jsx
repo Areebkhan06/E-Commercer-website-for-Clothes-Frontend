@@ -19,7 +19,7 @@ const Verify = () => {
         return null;
       }
       const response = await axios.post(
-        "http://localhost:3089/api/order/verifyStripe",
+        "https://e-commercer-website-for-clothes-backend.onrender.com/api/order/verifyStripe",
         { success, orderId },
         { headers: { token } }
       );

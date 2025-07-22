@@ -35,7 +35,7 @@ const ShopContextProvider = (props) => {
     if (token) {
       try {
         await axios.post(
-          "http://localhost:3089/api/cart/add",
+          "https://e-commercer-website-for-clothes-backend.onrender.com/api/cart/add",
           { itemId, size },
           { headers: { token } }
         );
@@ -81,7 +81,7 @@ const ShopContextProvider = (props) => {
     if (token) {
       try {
         await axios.post(
-          "http://localhost:3089/api/cart/update",
+          "https://e-commercer-website-for-clothes-backend.onrender.com/api/cart/update",
           { itemId, size, quantity },
           { headers: { token } }
         );
@@ -112,7 +112,7 @@ const ShopContextProvider = (props) => {
   const getProductsData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3089/api/product/list"
+        "https://e-commercer-website-for-clothes-backend.onrender.com/api/product/list"
       );
       if (response.data.success) {
         setproducts(response.data.products);
@@ -128,7 +128,7 @@ const ShopContextProvider = (props) => {
   const getUserCart = async (token) => {
     try {
       const response = await axios.post(
-        "http://localhost:3089/api/cart/get",
+        "https://e-commercer-website-for-clothes-backend.onrender.com/api/cart/get",
         {},
         { headers: { token } }
       );

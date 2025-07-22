@@ -82,7 +82,7 @@ const PlaceOrder = () => {
 
       switch(paymentMethod){
         case "cod":
-          const response = await axios.post("http://localhost:3089/api/order/place",orderData,{headers:{token}});
+          const response = await axios.post("https://e-commercer-website-for-clothes-backend.onrender.com/api/order/place",orderData,{headers:{token}});
           if(response.data.success){
             setcartItem({})
             navigate("/orders");
@@ -92,7 +92,7 @@ const PlaceOrder = () => {
         break;  
         
         case "stripe":
-          const responseStripe = await axios.post("http://localhost:3089/api/order/stripe",orderData,{headers:{token}});
+          const responseStripe = await axios.post("https://e-commercer-website-for-clothes-backend.onrender.com/api/order/stripe",orderData,{headers:{token}});
           if(responseStripe.data.success){
             const {session_url} = responseStripe.data;
             window.location.replace(session_url);

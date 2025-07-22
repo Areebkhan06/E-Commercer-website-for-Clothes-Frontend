@@ -20,7 +20,7 @@ const Signup = () => {
   if (!passwordsMatch) return toast.error("Passwords do not match");
 
   try {
-    const response = await axios.post("http://localhost:3089/api/user/register", {
+    const response = await axios.post("https://e-commercer-website-for-clothes-backend.onrender.com/api/user/register", {
       name,
       email,
       password,
